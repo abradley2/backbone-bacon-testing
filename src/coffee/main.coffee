@@ -13,14 +13,14 @@ vm = new ViewMediator {
 			<div id='content-region'></div>
 		</div>
 	"""
-	views: 
-		'HomeView': require './views/Home.coffee'
-		'AboutView': require './views/About.coffee'
+	views:
+		'HomeView': require './views/Home/Home.coffee'
+		'AboutView': require './views/About/About.coffee'
 }
 
 class AppRouter extends Router
 	routes:
-		'': -> 
+		'': ->
 			vm.render {
 				'HomeView':
 					region: '#content-region'

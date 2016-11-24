@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:coffee && npm run build:styl",
-    "build:coffee": "browserify src/coffee/main.coffee -o public/main.bundle.js -t coffeeify",
-    "watch:coffee": "watchify src/coffee/main.coffee -o public/main.bundle.js -t coffeeify",
+    "build:coffee": "browserify src/coffee/main.coffee -o public/main.bundle.js -t coffeeify -t stringify",
+    "watch:coffee": "watchify src/coffee/main.coffee -o public/main.bundle.js -t coffeeify -t stringify",
     "build:styl": "stylus src/styl/main.styl -o public/main.bundle.css",
     "watch:styl": "stylus -w src/styl/main.styl -o public/main.bundle.css"
   },

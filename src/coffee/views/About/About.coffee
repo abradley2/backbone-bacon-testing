@@ -2,10 +2,7 @@
 
 class About extends View
 
-	template: """<div>
-		<h3>About View</h3>
-		<a href='#'>Home</a>
-	</div>"""
+	template: require './About.html'
 
 	render: ->
 		@$el.html @template

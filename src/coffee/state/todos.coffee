@@ -15,4 +15,7 @@ class TodosCollection extends Collection
 	list: => @models
 
 
-module.exports = new TodosCollection()
+module.exports = new TodosCollection [
+	{title: 'First Todo', category: 1, completed: false}
+	{title: 'Second Todo', category: 2, completed: true}
+]
