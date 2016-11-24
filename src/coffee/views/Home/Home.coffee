@@ -50,7 +50,7 @@ class Home extends View
 				}
 
 		onRemoveTodo = @$el.asEventStream 'click', '[data-role="removeTodo"]'
-			.map (model) =>
+			.map (e) =>
 				{
 					action: 'REMOVE_TODO'
 					model: todos.get e.target.getAttribute('data-target')
